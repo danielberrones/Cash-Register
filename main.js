@@ -18,17 +18,22 @@ function checkCashRegister(price, cash, cid) {
 
 
 
+
+// ALL TEST CONDITIONS
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 // RETURN OBJECT
+////////////////////////////////////////////////////////////////////////////////////////////////
 // checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) 
 // should return an object.
 // 335.40999999999997 cashInDrawerSum
 // 0.5 paymentDiff
 
 
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 // OPEN
+////////////////////////////////////////////////////////////////////////////////////////////////
 // checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) 
 // should return {status: "OPEN", change: [["QUARTER", 0.5]]}.
 // 335.40999999999997 cashInDrawerSum
@@ -40,12 +45,9 @@ function checkCashRegister(price, cash, cid) {
 // 96.74 paymentDiff
 
 
-
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 //INSUFFICIENT_FUNDS
+////////////////////////////////////////////////////////////////////////////////////////////////
 // checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) 
 // should return {status: "INSUFFICIENT_FUNDS", change: []}.
 // 0.01 cashInDrawerSum
@@ -57,12 +59,9 @@ function checkCashRegister(price, cash, cid) {
 // 0.5 paymentDiff
 
 
-
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 //CLOSED
+////////////////////////////////////////////////////////////////////////////////////////////////
 // checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]) 
 // should return {status: "CLOSED", change: [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]}.
 // 0.5 cashInDrawerSum
