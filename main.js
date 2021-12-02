@@ -1,17 +1,18 @@
 function checkCashRegister(price, cash, cid) {
-    let stat = ["INSUFFICIENT_FUNDS","CLOSED","OPEN"];
+    let cashInDrawerSum = 0;
     let changeArr = [];
     let paymentDiff = cash - price;
-    // sum of cash-in-drawer 
-    let cashInDrawerSum = 0;
+    let stat = ["INSUFFICIENT_FUNDS","CLOSED","OPEN"];
+    // sum in cash drawer
     for (let i in cid) {
         cashInDrawerSum += cid[i][1];
     }
+
     if (cashInDrawerSum < paymentDiff || paymentDiff % cashInDrawerSum !== 0) return {status:stat[0], change:changeArr};
     if (cashInDrawerSum == paymentDiff) return {status:stat[1], change:cid};
-    else {
-        return {status:stat[2], change:changeArr};
-    }
+
+
+
     // console.log(cashInDrawerSum,'cashInDrawerSum');
     // console.log(paymentDiff,'paymentDiff');
 }
@@ -32,7 +33,7 @@ function checkCashRegister(price, cash, cid) {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // OPEN
 ////////////////////////////////////////////////////////////////////////////////////////////////
-// checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) 
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]) 
 // should return {status: "OPEN", change: [["QUARTER", 0.5]]}.
 // 335.40999999999997 cashInDrawerSum
 // 0.5 paymentDiff
