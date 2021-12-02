@@ -9,14 +9,12 @@ function checkCashRegister(price, cash, cid) {
     }
     if (cashInDrawerSum < paymentDiff || paymentDiff % cashInDrawerSum !== 0) return {status:stat[0], change:changeArr};
     if (cashInDrawerSum == paymentDiff) return {status:stat[1], change:cid};
+    else {
+        return {status:stat[2], change:changeArr};
+    }
     // console.log(cashInDrawerSum,'cashInDrawerSum');
     // console.log(paymentDiff,'paymentDiff');
 }
-
-
-
-
-
 
 
 // ALL TEST CONDITIONS
