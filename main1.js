@@ -14,8 +14,7 @@ function cashReg(cost,price,cid) {
     console.log(`customer's change: ${priceDiff}`);
     console.log(`money in cash register: ${adjSum}`);
     console.log(cid.reverse());
-    console.log(`does customer have enough money to pay? ${customerHasEnough}`);
-    console.log(`does cash register have enough money to return customer's change? ${enoughCash}`);
+
 
     for (let i of cid) {
         if (i[0] == 'ONE HUNDRED') {
@@ -86,6 +85,51 @@ function cashReg(cost,price,cid) {
             console.log(`1 dollar bills in cash register: ${count}`);
         }
     }
+
+    for (let i of cid) {
+        if (i[0] == 'DIME') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= .1;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`dimes in cash register: ${count}`);
+        }
+    }
+
+    for (let i of cid) {
+        if (i[0] == 'NICKEL') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= .05;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`nickels in cash register: ${count}`);
+        }
+    }
+
+    for (let i of cid) {
+        if (i[0] == 'PENNY') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= .01;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`pennies in cash register: ${count}`);
+        }
+    }
+
+    console.log(`does customer have enough money to pay? ${customerHasEnough}`);
+    console.log(`does cash register have enough money to return customer's change? ${enoughCash}`);
 }
 
 // cashReg(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
