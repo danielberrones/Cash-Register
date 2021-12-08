@@ -14,8 +14,7 @@ function cashReg(cost,price,cid) {
     console.log(`customer's change: ${priceDiff}`);
     console.log(`money in cash register: ${adjSum}`);
     console.log(cid.reverse());
-
-
+    
     for (let i of cid) {
         if (i[0] == 'ONE HUNDRED') {
             let count = 0;
