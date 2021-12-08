@@ -1,7 +1,6 @@
 function cashReg(cost,price,cid) {
     stat = {insufficientFunds:"INSUFFICIENT_FUNDS",closed:"CLOSED",open:"OPEN"};
     let priceDiff = price - cost;
-    // parseFloat(priceDiff).toFixed(2);
     let customerHasEnough = price > cost;
     let sum = 0;
     for (let cash in cid) {
@@ -15,11 +14,50 @@ function cashReg(cost,price,cid) {
     console.log(`customer's change: ${priceDiff}`);
     console.log(`money in cash register: ${adjSum}`);
     console.log(cid.reverse());
-    // for (let cash in cid) {
-    //     console.log(cid[cash]);
-    // }
     console.log(`does customer have enough money to pay? ${customerHasEnough}`);
     console.log(`does cash register have enough money to return customer's change? ${enoughCash}`);
+
+    for (let i of cid) {
+        if (i[0] == 'ONE HUNDRED') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= 100;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`100 dollar bills in cash register: ${count}`);
+        }
+    }
+
+    for (let i of cid) {
+        if (i[0] == 'TWENTY') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= 20;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`20 dollar bills in cash register: ${count}`);
+        }
+    }
+
+    for (let i of cid) {
+        if (i[0] == 'TEN') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= 10;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`10 dollar bills in cash register: ${count}`);
+        }
+    }
 
     for (let i of cid) {
         if (i[0] == 'FIVE') {
@@ -27,11 +65,25 @@ function cashReg(cost,price,cid) {
             let count = 0;
             let max = i[1];
             do {
-                console.log(max -= 5);
+                max -= 5;
                 count += 1;
             }
             while (max > zero);
-            console.log(`this many five dollar bills in cash register: ${count-1}`);
+            console.log(`5 dollar bills in cash register: ${count}`);
+        }
+    }
+
+    for (let i of cid) {
+        if (i[0] == 'ONE') {
+            let zero = 0;
+            let count = 0;
+            let max = i[1];
+            do {
+                max -= 1;
+                count += 1;
+            }
+            while (max > zero);
+            console.log(`1 dollar bills in cash register: ${count}`);
         }
     }
 }
