@@ -18,112 +18,104 @@ function cashReg(cost,price,cid) {
 
     for (let i of cid) {
         if (i[0] == 'ONE HUNDRED') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= 100;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`100 dollar bills in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'TWENTY') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= 20;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`20 dollar bills in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'TEN') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= 10;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`10 dollar bills in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'FIVE') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= 5;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`5 dollar bills in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'ONE') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= 1;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`1 dollar bills in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'DIME') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= .1;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`dimes in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'NICKEL') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= .05;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`nickels in cash register: ${count}`);
         }
     }
 
     for (let i of cid) {
         if (i[0] == 'PENNY') {
-            let zero = 0;
             let count = 0;
             let max = i[1];
             do {
                 max -= .01;
                 count += 1;
             }
-            while (max > zero);
+            while (max > 0);
             console.log(`pennies in cash register: ${count}`);
         }
     }
@@ -132,7 +124,29 @@ function cashReg(cost,price,cid) {
     console.log(`does cash register have enough money to return customer's change? ${enoughCash}`);
 }
 
-// cashReg(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
-cashReg(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
-// cashReg(13, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 0], ["FIVE", 5], ["TEN", 10], ["TWENTY", 20], ["ONE HUNDRED", 0]]);
-// console.log("-------------------------------------")
+cashReg(103, 100, [["PENNY", .22], ["NICKEL", 12.85], ["DIME", 23.1], ["QUARTER", 4.75], ["ONE", 250], ["FIVE", 65], ["TEN", 210], ["TWENTY", 120], ["ONE HUNDRED", 300]]);
+
+// ◆◆◆◆  CASH REGISTER  ◆◆◆◆
+// cost: 103
+// amount paid: 100
+// customer's change: -3
+// money in cash register: 985.92
+// [ [ 'ONE HUNDRED', 300 ],
+//   [ 'TWENTY', 120 ],
+//   [ 'TEN', 210 ],
+//   [ 'FIVE', 65 ],
+//   [ 'ONE', 250 ],
+//   [ 'QUARTER', 4.75 ],
+//   [ 'DIME', 23.1 ],
+//   [ 'NICKEL', 12.85 ],
+//   [ 'PENNY', 0.22 ] ]
+// 100 dollar bills in cash register: 3
+// 20 dollar bills in cash register: 6
+// 10 dollar bills in cash register: 21
+// 5 dollar bills in cash register: 13
+// 1 dollar bills in cash register: 250
+// dimes in cash register: 231
+// nickels in cash register: 257
+// pennies in cash register: 22
+// does customer have enough money to pay? false
+// does cash register have enough money to return customer's change? true
