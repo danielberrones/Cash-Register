@@ -126,3 +126,28 @@ function cashReg(cost,price,cid) {
 
 
 cashReg(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+
+// ◆◆◆◆  CASH REGISTER  ◆◆◆◆
+// cost: 3.26
+// amount paid: 100
+// customer's change: 96.74
+// money in cash register: 335.41
+// [ [ 'ONE HUNDRED', 100 ],
+//   [ 'TWENTY', 60 ],
+//   [ 'TEN', 20 ],
+//   [ 'FIVE', 55 ],
+//   [ 'ONE', 90 ],
+//   [ 'QUARTER', 4.25 ],
+//   [ 'DIME', 3.1 ],
+//   [ 'NICKEL', 2.05 ],
+//   [ 'PENNY', 1.01 ] ]
+// 100 dollar bills in cash register: 1
+// 20 dollar bills in cash register: 3
+// 10 dollar bills in cash register: 2
+// 5 dollar bills in cash register: 11
+// 1 dollar bills in cash register: 90
+// dimes in cash register: 31
+// nickels in cash register: 41
+// pennies in cash register: 101
+// does customer have enough money to pay? true
+// does cash register have enough money to return customer's change? true
