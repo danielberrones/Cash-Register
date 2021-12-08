@@ -8,6 +8,7 @@ function cashReg(cost,price,cid) {
     }
     let adjSum = parseFloat(sum).toFixed(2);
     let enoughCash = adjSum > priceDiff;
+    
     console.log('◆◆◆◆  CASH REGISTER  ◆◆◆◆')
     console.log(`cost: ${cost}`);
     console.log(`amount paid: ${price}`);
