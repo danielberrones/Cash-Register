@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cash Register - My freeCodeCamp Solution</title>
     <style>
         body{
             background:linear-gradient(to right, #040404, #000000, #1f1c1c);
-            /* background: rgb(2,0,36); */
-/* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
-            /* background:charcoal; */
-        }
     </style>
 </head>
 <body>
@@ -34,9 +30,6 @@ function cashReg(cost,price,cid) {
                         "PENNY":0.01
                         }
     let objValues = Object.values(moneyValues);
-    // for (let i of objValues) {
-    //     console.log(i);
-    // }
     cid = cid.reverse(); 
     let diff = price - cost;
     let sum = 0;
@@ -47,11 +40,8 @@ function cashReg(cost,price,cid) {
     let returnValue = objValues.map(x=>x-adjSum);
     for (let i of returnValue) {
         console.log(i);
-        // console.log(returnValue[i]);
     }
-    // console.log(returnValue);
-    // console.log(adjSum);
-    // console.log(`must return ${diff}`);
+
     console.log(`delete ${diff} from ${adjSum}`);
     console.log(`cid remaining balance will be: ${parseFloat(adjSum-diff).toFixed(2)}`);
 
