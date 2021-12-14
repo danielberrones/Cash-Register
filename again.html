@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+<script>
+
+function cashReg(price,cash,cid) {
+    let result = [];
+    let cashValues = {  "ONE HUNDRED":100,
+                        "TWENTY":20,
+                        "TEN":10,
+                        "FIVE":5,
+                        "ONE":1,
+                        "QUARTER":.25,
+                        "DIME":.10,
+                        "NICKEL":.05,
+                        "PENNY":.01   }
+    cid.reverse();
+    let change = cash - price;
+    let customerHasEnoughMoney = cash > price;
+    let cidSum = 0;
+    for (let cash of cid) {
+        cidSum += cash[1];
+    }
+    let adjSum = parseFloat(cidSum).toFixed(2);
+    let cidHasEnoughMoney = adjSum > change;
+    let newSum = adjSum - change;
+    newCidSum = parseFloat(newSum).toFixed(2);
+
+    console.log(` price ${price} \n cash ${cash} \n change ${change} \n adjSum ${adjSum} \n customerHasEnoughMoney ${customerHasEnoughMoney} \n cidHasEnoughMoney ${cidHasEnoughMoney} \n newCidSum ${newCidSum} \n `);
+
+    // price 3.26 
+    // cash 100 
+    // change 96.74 
+    // adjSum 335.41 
+    // customerHasEnoughMoney true 
+    // cidHasEnoughMoney true 
+    // newCidSum 238.67 
+ 
+    for (let i of cid) {
+        console.log(i);
+    }
+    
+    // ['ONE HUNDRED', 100]
+    // ['TWENTY', 60]
+    // ['TEN', 20]
+    // ['FIVE', 55]
+    // ['ONE', 90]
+    // ['QUARTER', 4.25]
+    // ['DIME', 3.1]
+    // ['NICKEL', 2.05]
+    // ['PENNY', 1.01]
+
+    // let passingValue = 0;
+    for (let i of cid) {
+        if (change > i[1]) {
+            console.log(`is ${change} > ${i[1]} ${change > i[1]}`);
+            if (i[0] == 'TWENTY') {
+                let accumulator = 0;
+                for (let j = 0; j <= i[1]; j += 20 ) {
+                    console.log(j < change);
+                    accumulator = j;
+                } if (accumulator < change) {
+                    // return {status:"OPEN", change:accumulator};
+                    console.log({status:"OPEN", change:["TWENTY",accumulator]});
+                }
+            } // END TWENTY
+
+            
+                // if (i[0] == 'TEN') {
+                //     for (let j = 0; j <= i[1]; j += 10 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END TEN
+
+                // if (i[0] == 'FIVE') {
+                //     for (let j = 0; j <= i[1]; j += 5 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END FIVE
+
+                // if (i[0] == 'QUARTER') {
+                //     for (let j = 0; j <= i[1]; j += .25 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END QUARTER
+
+
+                // if (i[0] == 'DIME') {
+                //     for (let j = 0; j <= i[1]; j += .10 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END DIME
+
+
+                // if (i[0] == 'NICKEL') {
+                //     for (let j = 0; j <= i[1]; j += .05 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END NICKEL
+
+
+                // if (i[0] == 'PENNY') {
+                //     for (let j = 0; j <= i[1]; j += .01 ) {
+                //         console.log(j);
+                //         accumulator = j;
+                //     }
+                // } // END PENNY
+
+            // console.log(`accumulator: ${accumulator}`); //3
+            // console.log(`accumulator: ${accumulator}`); //3
+
+    return '';
+        }
+
+    }
+
+
+
+
+
+}
+console.log(cashReg(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));
+// should return {status: "OPEN", change: [["TWENTY", 60], ["TEN", 20], ["FIVE", 15], ["ONE", 1], ["QUARTER", 0.5], ["DIME", 0.2], ["PENNY", 0.04]]}.
+
+
+// console.log(cashReg(109.5, 200, [["PENNY", 1.51], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 45.25], ["ONE", 92], ["FIVE", 65], ["TEN", 220], ["TWENTY", 20], ["ONE HUNDRED", 0]]));
+
+</script>
+
+
+    </body>
+</html>
