@@ -31,14 +31,14 @@ function checkCashRegister(price, cash, cid) {
     //         // console.log(n[1]);
     //     } 
     // }
-    for (let j = 0; j < change; j+=cashValues["TWENTY"]) {
-        for (let n of cid) {
-            if (n[1] == "TWENTY") {
-                console.log(n[1]);
-            }
-        }
-        // console.log(j);
-    } 
+    //for (let j = 0; j < change; j+=cashValues["TWENTY"]) {
+    //    for (let n of cid) {
+    //        if (n[1] == "TWENTY") {
+    //            console.log(n[1]);
+    //        }
+    //    }
+    //    // console.log(j);
+    //} 
    
     console.log(`price ${price} cash ${cash}`);
     console.log(`change ${change} cidSum ${cidSum}`);
