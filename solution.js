@@ -133,13 +133,11 @@ function checkCashRegister(price, cash, cid) {
     }
 }
 
-
     console.log(finalChange)
     for (i in cid) {
       console.log(cid[i][1] > finalChange);
 
         }
-    //   console.log(cid[i][1] > finalChange);
 
     // if cid < change || you cannot return exact change
     // 1{status: "INSUFFICIENT_FUNDS", change: []}
@@ -155,12 +153,9 @@ function checkCashRegister(price, cash, cid) {
       output.change = cid;
       return output;
     }
-  
-  
-  
+    
     // otherwise return change, sorted high to low, as change key value
     // 3{status: "OPEN", change: [...]}
-  
     return output;
 
   }
