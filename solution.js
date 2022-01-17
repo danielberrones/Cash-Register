@@ -28,12 +28,14 @@ function checkCashRegister(price, cash, cid) {
       let max = i[1];
       do {
           max -= 100;
+        //   finalChange -= moneyValues['ONE HUNDRED'];
           count += 1;
         //   finalChange -= 100;
       }
       while (max > 0);
       countArr.push(count);
       console.log(`100 dollar bills in cash register: ${count}`);
+    //   console.log(`finalChange: ${finalChange}`);
     }
     else if (i[0] == 'TWENTY') {
         let count = 0;
@@ -133,11 +135,10 @@ function checkCashRegister(price, cash, cid) {
     }
 }
 
-    console.log(finalChange)
-    for (i in cid) {
-      console.log(cid[i][1] > finalChange);
-
-        }
+    // console.log(finalChange)
+    // for (i in cid) {
+    //   console.log(cid[i][1] > finalChange);
+    //     }
 
     // if cid < change || you cannot return exact change
     // 1{status: "INSUFFICIENT_FUNDS", change: []}
@@ -160,6 +161,11 @@ function checkCashRegister(price, cash, cid) {
 
   }
   
-  let solution = checkCashRegister(1.5, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+//   let solution = checkCashRegister(1.5, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+
+//   console.log(solution);
+
+
+  let solution = checkCashRegister(102.5, 200, [["PENNY", 21.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 190], ["FIVE", 515], ["TEN", 20], ["TWENTY", 160], ["ONE HUNDRED", 1100]]);
 
   console.log(solution);
