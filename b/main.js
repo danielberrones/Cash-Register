@@ -13,21 +13,15 @@ function checkCashRegister(price, cash, cid) {
                     };
   let output = {status: "", change:[]};
   let change = cash - price;
-  var finalChange = change;
+  console.log(`change: ${change}`);
+ // var finalChange = change;
   let cidSum = 0;
 
   for (let i of cid) {cidSum += i[1]};
   parseFloat(cidSum).toFixed(2);
   // should always return {status:"SOMETHING",change:[]}
   // 3 CONDITIONS
-  console.log(`finalChange: ${finalChange}`);
-  for (let i of cid) {
-	  console.log(i[1])
-  }
-//console.log(moneyVals["TWENTY"]);
-// 
-
-
+ // console.log(`finalChange: ${finalChange}`);
 
   for (let i of cid) {
     if (i[0] == 'ONE HUNDRED') {
