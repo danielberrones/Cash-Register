@@ -1,6 +1,7 @@
 function cashRegister(price,cash,cid) {
 	cid.reverse();
 	let change = cash - price;
+	console.log('change',change)
 	let cidSum = 0;
 	for (let n of cid) {
 		cidSum += n[1];
@@ -18,6 +19,8 @@ function cashRegister(price,cash,cid) {
 	function reduceTWENTY() {
 		for (let i = cid[1][1]; i >= 0; i -= 20) {
 			console.log(Number(parseFloat(i).toFixed(2)));
+			
+			console.log(change -= i);
 		}
 	}
 	reduceTWENTY();
