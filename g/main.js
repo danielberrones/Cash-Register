@@ -10,74 +10,74 @@ function cashRegister(price, cash, cid) {
 		for (let i = cid[0][1]; i >= 0; i -= 100) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endHundred')	
 	}
 	reduceHUNDRED();
-	console.log('endHundred')	
 	
 	function reduceTWENTY() {
 		for (let i = cid[1][1]; i >= 0; i -= 20) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endTWENTY')	
 	}
 	reduceTWENTY();
-	console.log('endTWENTY')	
 	
 	function reduceTEN() {
 		for (let i = cid[2][1]; i >= 0; i -= 10) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endTEN')	
 	}
 	reduceTEN();
-	console.log('endTEN')	
 	
 	function reduceFIVE() {
 		for (let i = cid[3][1]; i >= 0; i -= 5) {
 			console.log(i);
 		}
+        console.log('endFIVE')	
 	}
 	reduceFIVE();
-	console.log('endFIVE')	
 	
 	function reduceONE() {
 		for (let i = cid[4][1]; i >= 0; i -= 1) {
 			console.log(i);
 		}
+        console.log('endONE')	
 	}
 	reduceONE();
-	console.log('endONE')	
 	
 	function reduceQUARTER() {
 		for (let i = cid[5][1]; i >= 0; i -= .25) {
 			console.log(i);
 		}
+        console.log('endQUARTER')	
 	}
 	reduceQUARTER();
-	console.log('endQUARTER')	
 	
 	function reduceDIME() {
 		for (let i = cid[6][1]; i >= 0; i -= .10) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endDIME')	
 	}
 	reduceDIME();
-	console.log('endDIME')	
 	
 	function reduceNICKEL() {
 		for (let i = cid[7][1]; i >= 0; i -= .05) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endNICKEL')	
 	}
 	reduceNICKEL();
-	console.log('endNICKEL')	
 	
 
 	function reducePENNY() {
 		for (let i = cid[8][1]; i >= 0; i -= .01) {
 			console.log(Number(parseFloat(i).toFixed(2)));
 		}
+        console.log('endPENNY')	
 	}
 	reducePENNY();
-	console.log('endPENNY')	
     return "";
 }
 
