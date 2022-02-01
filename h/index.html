@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="coding">
+		<meta description="solving javascript problems">
+		<title>js</title>
+<style>
+body{
+	background:darkgreen;
+}
+</style>
+<body>
+	<script>
+
+		function cashRegister(price, cash, cid) {
+			cid.reverse(); // sort high to low 
+			let change = cash - price;
+			let arr = [];
+			console.log("change",change);
+			for (let i of cid) {
+				arr.push(i[0],i[1],i[1]>= change);
+			}
+			return arr;
+			//return change;
+		}
+let result = cashRegister(2.77, 20, [["PENNY", 1.68],["NICKEL",.85],["DIME",1.15],["QUARTER",2.50],["ONE",24],["FIVE",35],["TEN",80],["TWENTY",120],["ONE HUNDRED",300]]);
+console.log(result);
+
+
+	</script>
+
+
+</body>
+</html>
