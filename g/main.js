@@ -5,7 +5,6 @@ function cashRegister(price, cash, cid) {
     function reverseAndSumCID() {
         cid.reverse();
         for (let i of cid) {cidSum += i[1]}
-        // parseInt(cidSum).toFixed(2);
     }
     reverseAndSumCID();
 
@@ -23,6 +22,11 @@ function cashRegister(price, cash, cid) {
             // console.log(i)
             // console.log(change -= max);
             // console.log(change = change - max);
+			// console.log(?change -= 5);
+			// for (let i )
+			console.log(change);
+			change -= 5;
+			if (change <= 0) break;
 		}
         console.log('endHundred')	
 	}
