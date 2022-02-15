@@ -2,14 +2,19 @@ function checkCashRegister(price, cash, cid) {
   var change = cash - price;
   var cidSum = 0;
   var listOfValues = [100,20,10,5,1,.25,.1,.05,.01];
+  var arr = [];
   // console.log('list of values',listOfValues);
   // for (let i of listOfValues) {console.log(i)}
   cid.reverse();
   // console.log('cid\n',cid);
 
   function decrementValus() {
-    return ``
+    for (let i of cid) {
+      arr.push(i[1]);
+    }
+    return arr;
   }
+  console.log(decrementValus());
 
   // for (let j of listOfValues) {
   //   console.log(j)
