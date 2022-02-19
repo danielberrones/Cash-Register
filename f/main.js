@@ -1,7 +1,7 @@
 function checkCashRegister(price, cash, cid) { var countArr = [];
 	cid.reverse();
 	var output = {status: '', change: []};
-	let change = cash - price;
+	var change = cash - price;
 	console.log('cash',cash);
 	console.log('price',price);
 	console.log('change',change);
@@ -20,6 +20,8 @@ function checkCashRegister(price, cash, cid) { var countArr = [];
       		let count = 0;
 	      	let max = i[1];
      		 do {
+					 // console.log(change);
+					 // console.log(max);
           	max -= 100;
         //   finalChange -= moneyValues['ONE HUNDRED'];
           	count += 1;
@@ -128,16 +130,18 @@ function checkCashRegister(price, cash, cid) { var countArr = [];
     }
 }
 
-	console.log('Math.floor(change/100))',Math.floor(change / 100));
-	console.log('Math.floor(change/20))',Math.floor(change / 20));
-	console.log('Math.floor(change/10))',Math.floor(change / 10));
-	console.log('Math.floor(change/5))',Math.floor(change / 5));
-	console.log('Math.floor(change/1))',Math.floor(change / 1));
-	console.log('Math.floor(change/.25))',Math.floor(change / .25));
-	console.log('Math.floor(change/.10))',Math.floor(change / .10));
-	console.log('Math.floor(change/.05))',Math.floor(change / .05));
-	console.log('Math.floor(change/.01))',Math.floor(change / .01));
 
+
+	// console.log('Math.floor(change/100))',Math.floor(change / 100));
+	// console.log('Math.floor(change/20))',Math.floor(change / 20));
+	// console.log('Math.floor(change/10))',Math.floor(change / 10));
+	// console.log('Math.floor(change/5))',Math.floor(change / 5));
+	// console.log('Math.floor(change/1))',Math.floor(change / 1));
+	// console.log('Math.floor(change/.25))',Math.floor(change / .25));
+	// console.log('Math.floor(change/.10))',Math.floor(change / .10));
+	// console.log('Math.floor(change/.05))',Math.floor(change / .05));
+	// console.log('Math.floor(change/.01))',Math.floor(change / .01));
+	//
 
 	if (sum < change || change % sum !== 0) {
 		output.status = 'INSUFFICIENT_FUNDS';
@@ -146,11 +150,11 @@ function checkCashRegister(price, cash, cid) { var countArr = [];
 	else if (change === sum) {
 		output.status = 'CLOSED';
 		output.change = cid;
-	} 
+	}
 		// code
 
 
-	
+
 
 
 

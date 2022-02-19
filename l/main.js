@@ -12,21 +12,25 @@ function checkCashRegister(price, cash, cid) {
   // console.log(cid[0][1]); // 500
   // console.log(cashValues[0]); // 100
   function hundred() {
-    console.log(cid[0][1]);
-    while (cid[0][1] > 0) {
-      console.log(cid[0][1] = cid[0][1] - cashValues[0]);
+    // console.log(cid[0][1]);
+    for (let i of cid) {
+      console.log(i[1]);
+      // console.log('end');
+      // while ([i][1] > 0) {
+      //   console.log([i][1] = [i][1] - cashValues[0]);
+      //   }
+      }
     }
-  }
 
   hundred();
 
-  console.log('cid');
-  for (let x of cid) {console.log(x[1])};
-
-  console.log('cashValues');
-  for (let x of cashValues) {console.log(x)};
-  console.log('cashInDrawerSum');
-  return cashInDrawerSum;
+//   console.log('cid');
+//   for (let x of cid) {console.log(x[1])};
+//
+//   console.log('cashValues');
+//   for (let x of cashValues) {console.log(x)};
+//   console.log('cashInDrawerSum');
+//   return cashInDrawerSum;
 }
 
 let result = checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 500]]);
